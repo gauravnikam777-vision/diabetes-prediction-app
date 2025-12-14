@@ -69,10 +69,15 @@ input_df[num_cols] = scaler.fit_transform(input_df[num_cols])
 if st.button("Predict Diabetes"):
 
     prob = model.predict_proba(input_df)[0][1]
+
+    st.metric("Diabetes Risk Probability", f"{prob*100:.1f}%")
+
+  
     prediction = 1 if prob >= 0.50 else 0
 
     if prediction == 1:
         st.error(f"⚠️ Diabetes Positive (Probability: {prob:.2f})")
     else:
         st.success(f"✅ Diabetes Negative (Probability: {prob:.2f})")
+
 
