@@ -9,6 +9,8 @@ model = joblib.load("diabetes_xgboost.pkl")
 
 st.title("🩺 Diabetes Prediction App")
 
+st.info("This tool is for educational purposes only and not a medical diagnosis.")
+
 # ------------ USER INPUT ---------------
 gender = st.selectbox("Gender", ["female", "male", "other"])
 age = st.number_input("Age", min_value=1, max_value=120)
@@ -73,3 +75,4 @@ if st.button("Predict Diabetes"):
         st.error(f"⚠️ Diabetes Positive (Probability: {prob:.2f})")
     else:
         st.success(f"✅ Diabetes Negative (Probability: {prob:.2f})")
+
