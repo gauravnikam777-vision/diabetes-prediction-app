@@ -16,3 +16,5 @@ A machine learning web application to predict diabetes risk using medical featur
 
 ### Live App
 https://diabetes-prediction-app-pro.streamlit.app/
+
+⚠️ Disclaimer: This application is for educational purposes only and not a medical diagnosis.
